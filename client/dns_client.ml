@@ -187,7 +187,7 @@ struct
     transport : Transport.t ;
   }
 
-  let create ?(size=32) ?nameserver ?(timeout = Duration.of_sec 5) stack =
+  let create ?(size=32) ?nameserver ?(timeout = Duration.of_sec 30) stack =
     { cache = Dns_cache.empty size ;
       transport = Transport.create ?nameserver ~timeout stack
     }
